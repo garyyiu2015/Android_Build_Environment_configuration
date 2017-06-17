@@ -29,10 +29,16 @@ sudo chown root:root /usr/bin/fastboot
 sudo chmod +s /usr/bin/fastboot
 fi
 
+if [ -d $HOME/bin ];
+then
 echo “安装repo”
-mkdir -p ~/bin
-curl https://raw.githubusercontent.com/akhilnarang/scripts/master/utils/repo > ~/bin/repo
-chmod a+x ~/bin/repo
+curl https://raw.githubusercontent.com/akhilnarang/scripts/master/utils/repo > $HOME/bin/repo
+chmod a+x $HOME/bin/repo
+else
+mkdir -p $HOME/bin
+curl https://raw.githubusercontent.com/akhilnarang/scripts/master/utils/repo > $HOME/bin/repo
+chmod a+x $HOME/bin/repo
+fi
 
 echo “修复Linux Mint18.1下搜狗输入法的正常使用”
 sudo apt install fcitx-config-gtk fcitx-config-gtk2 fcitx-frontend-all fcitx-frontend-fbterm fcitx-libs-gclient fcitx-libs-qt5 fcitx-module-lua fcitx-tools fcitx-ui-light gir1.2-fcitx-1.0 -y
