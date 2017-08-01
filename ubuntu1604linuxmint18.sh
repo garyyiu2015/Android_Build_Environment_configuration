@@ -32,11 +32,11 @@ fi
 if [ -d $HOME/bin ];
 then
 echo “安装repo”
-curl https://raw.githubusercontent.com/akhilnarang/scripts/master/utils/repo > $HOME/bin/repo
+curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo > $HOME/bin/repo
 chmod a+x $HOME/bin/repo
 else
 mkdir -p $HOME/bin
-curl https://raw.githubusercontent.com/akhilnarang/scripts/master/utils/repo > $HOME/bin/repo
+curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo > $HOME/bin/repo
 chmod a+x $HOME/bin/repo
 fi
 
